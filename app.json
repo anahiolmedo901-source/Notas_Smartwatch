@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "MicroNotes Voice",
+    "slug": "micronotes-voice",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#000000",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.micronotes.voice",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "MicroNotes Voice usa el reconocimiento de voz para transcribir tus notas.",
+        "NSMicrophoneUsageDescription": "MicroNotes Voice usa el micrófono para convertir tu voz en notas."
+      }
+    },
+    "android": {
+      "package": "com.micronotes.voice",
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE"
+      ],
+      "allowBackup": false,
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 1
+    },
+    "plugins": [
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "MicroNotes Voice usa el micrófono para convertir tu voz en notas.",
+          "speechRecognitionPermission": "MicroNotes Voice usa el reconocimiento de voz para transcribir tus notas.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox",
+            "com.google.android.tts"
+          ]
+        }
+      ],
+      "./plugins/withWearOS",
+      "expo-font"
+    ],
+    "owner": "anahi_olm",
+    "extra": {
+      "eas": {
+        "projectId": "6bd55d5b-5982-4cf5-8325-6b520964017c"
+      }
+    }
+  }
+}
