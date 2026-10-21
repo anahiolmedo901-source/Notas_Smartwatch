@@ -28,6 +28,9 @@
         "buildType": "apk"
       }
     },
+    "standalone": {
+      "extends": "preview"
+    },
     "wear": {
       "extends": "preview",
       "env": {

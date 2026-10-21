@@ -42,6 +42,7 @@
     "ios:dev": "npx eas-cli@latest build --platform ios --profile development",
     "apk:dev": "npx eas-cli@latest build --platform android --profile development",
     "apk:dev-wear": "npx eas-cli@latest build --platform android --profile development-wear",
+    "apk:standalone": "npx eas-cli@latest build --platform android --profile standalone",
     "apk:phone": "npx eas-cli@latest build --platform android --profile preview",
     "apk:wear": "npx eas-cli@latest build --platform android --profile wear",
     "aab:wear": "npx eas-cli@latest build --platform android --profile wear-store"

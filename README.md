@@ -78,11 +78,13 @@ npx eas-cli init          # agrega el projectId a app.json
 | `npm run apk:dev` | APK development build, teléfono | Desarrollo con recarga y micrófono real |
 | `npm run ios:dev` | Development build iOS, teléfono | Desarrollo con recarga y micrófono real |
 | `npm run apk:dev-wear` | APK development build, **reloj** | Lo mismo en Wear OS |
+| `npm run apk:standalone` | APK independiente, teléfono | Arranca sin Expo Go ni Metro |
 | `npm run apk:phone` | APK de pruebas, teléfono | Pruebas completas sin servidor de desarrollo |
 | `npm run apk:wear` | **APK final para reloj** | Entrega e instalación con adb |
 | `npm run aab:wear` | AAB para reloj | Publicar en Google Play |
 
 Los perfiles `*-wear` activan `WEAR_OS=1`, que habilita `plugins/withWearOS.js` (marca la app como app de reloj, independiente del teléfono).
+`apk:standalone` usa el perfil EAS `standalone`, no incluye `developmentClient` y contiene el bundle JavaScript; después de instalarlo no se debe ejecutar `start:dev`.
 Los demás perfiles generan un APK instalable en teléfonos.
 
 Instalar el APK en el reloj (descarga el `.apk` desde el enlace que muestra EAS al terminar):
